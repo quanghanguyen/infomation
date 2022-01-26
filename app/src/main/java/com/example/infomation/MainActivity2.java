@@ -8,12 +8,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.tabs.TabLayout;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    Button btnLoad;
-    ImageView imgHinh;
-    String URL = "https://wallpapercave.com/wp/HFsWtAz.jpg";
+//    Button btnLoad;
+//    ImageView imgHinh;
+//    String URL = "https://wallpapercave.com/wp/HFsWtAz.jpg";
+
+    private TabLayout mTabLayout;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
