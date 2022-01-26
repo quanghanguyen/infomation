@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">infomation</string>
+    <string name="add_infomation">Add Infomation</string>
+    <string name="name">Name</string>
+    <string name="avatar">Avatar</string>
+    <string name="birthday">Birthday</string>
+    <string name="job">Job</string>
+    <string name="introduction">Introduction</string>
+
+    <!-- Activity 2 -->
+    <string name="Infomation">Infomation</string>
+
+
+</resources>
