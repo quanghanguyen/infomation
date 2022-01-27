@@ -9,6 +9,8 @@
 
     <!-- Activity 2 -->
     <string name="Infomation">Infomation</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="introductionfragment">Introduction fragment</string>
+    <string name="jobfragment">Job fragment</string>
 
 </resources>
