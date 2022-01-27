@@ -16,13 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.setTitle("Add Infomation");
+
+
         btnLoad1 = (Button) findViewById(R.id.btnLoad1);
-        btnLoad1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMainActivity2();
-            }
-        });
+
+        btnLoad1.setOnClickListener(view -> openMainActivity2());
 
     }
 

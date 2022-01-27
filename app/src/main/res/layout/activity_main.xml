@@ -6,26 +6,25 @@
     android:background="@color/white">
 
 
-    <TextView
-        android:id="@+id/add_infomation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/add_infomation"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:id="@+id/add_infomation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:text="@string/add_infomation"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name"
-        android:layout_below="@+id/add_infomation"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
