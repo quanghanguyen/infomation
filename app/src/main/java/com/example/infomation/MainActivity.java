@@ -30,31 +30,27 @@ public class MainActivity extends AppCompatActivity {
         introduction = (EditText) findViewById(R.id.introduction_box);
 
 
-
-
-
         btn.setOnClickListener(view -> openMainActivity2());
 
     }
 
-    public void openMainActivity2()
-        {
+    public void openMainActivity2() {
 
-            String name_box = name.getText().toString();
-            String birthday_box = birthday.getText().toString();
-            String avatar_box = avatar.getText().toString();
-            String job_box = job.getText().toString();
-            String introduction_box = introduction.getText().toString();
+        String name_box = name.getText().toString();
+        String birthday_box = birthday.getText().toString();
+        String avatar_box = avatar.getText().toString();
+        String job_box = job.getText().toString();
+        String introduction_box = introduction.getText().toString();
 
-            Intent intent = new Intent(this, MainActivity2.class);
-            intent.putExtra("keyname", name_box);
-            intent.putExtra("keybirthday", birthday_box);
-            intent.putExtra("keyavatar", avatar_box);
-            intent.putExtra("keyjob", job_box);
-            intent.putExtra("keyintroduction", introduction_box);
+        Intent intent = new Intent(this, MainActivity2.class);
+        intent.putExtra("keyname", name_box);
+        intent.putExtra("keybirthday", birthday_box);
+        intent.putExtra("keyavatar", avatar_box);
+        intent.putExtra("keyjob", job_box);
+        intent.putExtra("keyintroduction", introduction_box);
 
-            startActivity(intent);
+        startActivity(intent);
 
 
-        }
+    }
 }

@@ -8,6 +8,17 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
+    private String job;
+    private String information;
+
+    public void setJob(String job) {
+        this.job = job;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
+    }
+
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
@@ -17,10 +28,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new IntroductionFragment();
+                return IntroductionFragment.newInstance(job);
 
             case 1:
-                return new JobFragment();
+                return  JobFragment.newInstance(information);
 
             default:
                 return new IntroductionFragment();
