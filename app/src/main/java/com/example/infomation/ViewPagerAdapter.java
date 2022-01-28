@@ -28,10 +28,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return IntroductionFragment.newInstance(job);
+                return IntroductionFragment.newInstance(information);
 
             case 1:
-                return  JobFragment.newInstance(information);
+                return  JobFragment.newInstance(job);
 
             default:
                 return new IntroductionFragment();

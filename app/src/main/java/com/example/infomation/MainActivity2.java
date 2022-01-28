@@ -18,7 +18,6 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity2 extends AppCompatActivity {
 
-
     //    private Button btnLoad1;
     private ImageView ivAvatar;
 //    String URL = "https://wallpapercave.com/wp/HFsWtAz.jpg";
@@ -34,6 +33,8 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        //this.setTitle("Activity 2");
 
 
 //        btnLoad1 = (Button)findViewById(R.id.btnLoad1);

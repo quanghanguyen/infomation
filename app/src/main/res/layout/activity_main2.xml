@@ -73,8 +73,7 @@
             android:layout_toRightOf="@+id/hinhtron"
             android:text="Birthday"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textSize="20sp" />
 
 
     </RelativeLayout>
