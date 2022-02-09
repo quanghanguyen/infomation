@@ -13,4 +13,9 @@
     <string name="introductionfragment">Introduction fragment</string>
     <string name="jobfragment">Job fragment</string>
 
+
+
+    <!-- recyclerview -->
+    <string name="sarah">Elizabeth Sarah</string>
+
 </resources>
