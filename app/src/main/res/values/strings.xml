@@ -6,7 +6,7 @@
     <string name="birthday">Birthday</string>
     <string name="job">Job</string>
     <string name="introduction">Introduction</string>
-
+    <string name="done">Done</string>
     <!-- Activity 2 -->
     <string name="Infomation">Infomation</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -17,5 +17,6 @@
 
     <!-- recyclerview -->
     <string name="sarah">Elizabeth Sarah</string>
+    <string name="add_data">Add Data</string>
 
 </resources>

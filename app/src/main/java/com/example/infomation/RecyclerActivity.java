@@ -1,10 +1,14 @@
 package com.example.infomation;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +17,9 @@ public class RecyclerActivity extends AppCompatActivity {
 
     private RecyclerView rcvUser;
     private AdapterUser userAdapter;
+    private UserViewModel userViewModel;
+
+    private Button btnAdddata;
 
 
     @Override
@@ -22,6 +29,11 @@ public class RecyclerActivity extends AppCompatActivity {
 
         rcvUser = findViewById(R.id.rcvUser);
 
+
+        btnAdddata = (Button) findViewById(R.id.btnAddData);
+
+        btnAdddata.setOnClickListener(view -> openMainActivity());
+
         userAdapter = new AdapterUser(this);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
@@ -30,7 +42,24 @@ public class RecyclerActivity extends AppCompatActivity {
         // Viết một hàm riêng bên ngoài?
         userAdapter.setData(getListUser());
         rcvUser.setAdapter(userAdapter);
+
+        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        userViewModel.getmListUserLiveData().observe((this, new Observer<List<User>>() {
+            @Override
+            public void onChanged(List<User> users) {
+                userAdapter = new AdapterUser(users);
+                rcvUser.setAdapter(userAdapter);
+            }
+        }));
+
     }
+
+    public void openMainActivity() {
+        Intent intent2 = new Intent(this, MainActivity.class);
+        startActivity(intent2);
+    }
+
+
 
     private List<User> getListUser()
     {

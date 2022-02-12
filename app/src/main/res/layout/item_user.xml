@@ -12,6 +12,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/rl1"
         android:background="@color/white"
         android:padding="20dp"
         android:layout_width="match_parent"
@@ -34,10 +35,6 @@
             android:layout_toEndOf="@+id/iv_sarah"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp" />
-
-
-
-
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
