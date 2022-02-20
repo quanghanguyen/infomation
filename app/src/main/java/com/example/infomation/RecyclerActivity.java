@@ -19,6 +19,8 @@ public class RecyclerActivity extends AppCompatActivity {
     private AdapterUser userAdapter;
     private UserViewModel userViewModel;
 
+    private int index = 1;
+
     private Button btnAdddata;
 
 
@@ -44,13 +46,14 @@ public class RecyclerActivity extends AppCompatActivity {
         rcvUser.setAdapter(userAdapter);
 
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
-        userViewModel.getmListUserLiveData().observe((this, new Observer<List<User>>() {
+        userViewModel.getListUserLiveData().observe(this, new Observer<List<User>>() {
             @Override
             public void onChanged(List<User> users) {
                 userAdapter = new AdapterUser(users);
                 rcvUser.setAdapter(userAdapter);
             }
-        }));
+        });
+
 
     }
 

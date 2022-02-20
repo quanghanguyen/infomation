@@ -24,12 +24,12 @@ public class UserViewModel extends ViewModel {
 
         mListUserLiveData.setValue(mListUser);
     }
-    public MutableLiveData<List<User>> getmListUserLiveData() {
+    public MutableLiveData<List<User>> getListUserLiveData() {
         return mListUserLiveData;
     }
 
     public void addUser(User user) {
         mListUser.add(user);
-        mListUserLiveData.setValue();
+        mListUserLiveData.setValue(mListUser);
     }
 }
