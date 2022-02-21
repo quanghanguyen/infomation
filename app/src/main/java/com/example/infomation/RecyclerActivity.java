@@ -19,7 +19,7 @@ public class RecyclerActivity extends AppCompatActivity {
     private Button btn;
     private RecyclerView rcvUser;
     private AdapterUser userAdapter;
-
+    List<User> list=new ArrayList();
     //private TextView edtNameReceived;
 
 
@@ -52,17 +52,17 @@ public class RecyclerActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         // check if the request code is same as what is passed  here it is 2
-        if(requestCode==2)
-        {
+        if (requestCode == 2) {
             String receivedData = data.getStringExtra("strName");
+            addItem(new User(R.drawable.avatar_2, receivedData));
+           // list.add(new User(R.drawable.avatar_2, receivedData));
+            //userAdapter.setSingleData(new User(R.drawable.avatar_2, receivedData));
             //textView1.setText(receivedData);
         }
     }
-
 
 
     public void openMainActivity() {
@@ -72,11 +72,8 @@ public class RecyclerActivity extends AppCompatActivity {
     }
 
 
-
-
-    private List<User> getListUser()
-    {
-        List<User> list = new ArrayList<>();
+    private List<User> getListUser() {
+       list = new ArrayList<>();
         list.add(new User(R.drawable.avatar_2, "Jordan"));
         list.add(new User(R.drawable.avatar_3, "Belle"));
         list.add(new User(R.drawable.avatar_4, "Jane"));
@@ -88,18 +85,17 @@ public class RecyclerActivity extends AppCompatActivity {
         //list.add(new User(R.drawable.avatar_2, receivedData));
 
         return list;
+    }
+    private void addItem(User item) {
+        list.add(item);
+        userAdapter.notifyDataSetChanged();
+       // addItem("New Item");
+    }
+}
+
+
 
 //        findViewById(R.id.btnLoad1).setOnClickListener(view -> {
 //            list.add(new User(R.drawable.avata_6, "Quang"));
 //            userAdapter.notifyDataSetChanged();
 //        });
-
-        private void addItem(String item) {
-        list.add(item);
-        userAdapter.notifyDataSetChanged();
-    }
-
-        addItem("New Item");
-    }
-
-}
