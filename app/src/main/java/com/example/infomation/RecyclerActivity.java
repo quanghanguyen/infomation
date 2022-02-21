@@ -85,8 +85,21 @@ public class RecyclerActivity extends AppCompatActivity {
         //list.add(new User(R.drawable.avatar_7, "Jack"));
         //list.add(new User(R.drawable.avatar_8, "Peter"));
         //list.add(new User(R.drawable.avatar_9, "Elon"));
-        list.add(new User(R.drawable.avatar_2, receivedData));
+        //list.add(new User(R.drawable.avatar_2, receivedData));
 
         return list;
+
+//        findViewById(R.id.btnLoad1).setOnClickListener(view -> {
+//            list.add(new User(R.drawable.avata_6, "Quang"));
+//            userAdapter.notifyDataSetChanged();
+//        });
+
+        private void addItem(String item) {
+        list.add(item);
+        userAdapter.notifyDataSetChanged();
     }
+
+        addItem("New Item");
+    }
+
 }

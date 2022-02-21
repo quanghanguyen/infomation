@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("strBirthday", strBirthday);
                 intent.putExtra("strJob", strJob);
                 intent.putExtra("avatar", strIntroduction);
-                openRecyclerActivity();
+
+                //openRecyclerActivity();
 
                 setResult(2, intent);
                 finish();
