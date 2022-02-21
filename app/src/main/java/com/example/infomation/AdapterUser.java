@@ -25,7 +25,6 @@ public class AdapterUser extends RecyclerView.Adapter<AdapterUser.UserViewHolder
     {
         this.mListUser = list;
         notifyDataSetChanged();
-
     }
 
     @NonNull
