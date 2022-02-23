@@ -1,8 +1,11 @@
 package com.example.infomation;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.widget.AdapterView.OnItemLongClickListener;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +22,7 @@ public class RecyclerActivity extends AppCompatActivity {
     private Button btn;
     private RecyclerView rcvUser;
     private AdapterUser userAdapter;
-    List<User> list=new ArrayList();
+    List<User> list = new ArrayList();
     //private TextView edtNameReceived;
 
 
@@ -49,6 +52,19 @@ public class RecyclerActivity extends AppCompatActivity {
         // Viết một hàm riêng bên ngoài?
         userAdapter.setData(getListUser());
         rcvUser.setAdapter(userAdapter);
+
+        rcvUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMainActivity2();
+            }
+        });
+        }
+
+    public void openMainActivity2() {
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+
     }
 
     @Override
@@ -58,7 +74,7 @@ public class RecyclerActivity extends AppCompatActivity {
         if (requestCode == 2) {
             String receivedData = data.getStringExtra("strName");
             addItem(new User(R.drawable.avatar_2, receivedData));
-           // list.add(new User(R.drawable.avatar_2, receivedData));
+            //list.add(new User(R.drawable.avatar_2, receivedData));
             //userAdapter.setSingleData(new User(R.drawable.avatar_2, receivedData));
             //textView1.setText(receivedData);
         }
@@ -91,11 +107,13 @@ public class RecyclerActivity extends AppCompatActivity {
         userAdapter.notifyDataSetChanged();
        // addItem("New Item");
     }
+
+    private void ConfirmDelete() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.delete);
+        builder.setIcon(R.mipmap.ic_launcher);
+        builder.show();
+
+    }
 }
 
-
-
-//        findViewById(R.id.btnLoad1).setOnClickListener(view -> {
-//            list.add(new User(R.drawable.avata_6, "Quang"));
-//            userAdapter.notifyDataSetChanged();
-//        });

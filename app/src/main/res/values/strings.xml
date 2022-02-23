@@ -8,7 +8,7 @@
     <string name="introduction">Introduction</string>
     <string name="done">Done</string>
     <string name="addData">Add Data</string>
-
+    <string name="delete"> Delete?</string>
 
     <!-- Activity 2 -->
     <string name="Infomation">Infomation</string>
