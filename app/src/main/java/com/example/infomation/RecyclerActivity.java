@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 
 import android.content.Intent;
@@ -59,6 +60,20 @@ public class RecyclerActivity extends AppCompatActivity {
                 openMainActivity2();
             }
         });
+
+
+        // chỗ này đây
+
+        rcvUser.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                ConfirmDelete();
+
+                return false;
+            }
+        });
+
         }
 
     public void openMainActivity2() {
@@ -112,6 +127,7 @@ public class RecyclerActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.delete);
         builder.setIcon(R.mipmap.ic_launcher);
+
         builder.show();
 
     }
